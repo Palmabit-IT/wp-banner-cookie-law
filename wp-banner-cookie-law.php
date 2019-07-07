@@ -4,7 +4,7 @@
  * Plugin Name: WP Banner Cookie Law
  * Plugin URI: https://github.com/Palmabit-IT/wp-banner-cookie-law
  * Description: WP Banner Cookie Law is a cookie-info banner compliance with the GDPR and the EU cookie law. It allows the user to give consent in a granular way.
- * Version: 1.0
+ * Version: 0.0.2
  * Author: Palmabit
  * Author URI: https://www.palmabit.com
  * 
