@@ -48,6 +48,9 @@ function cookie_banner_settings_page_setup()
     add_settings_field('clb_showMarketingOption', 'Show marketing checkbox', 'setting_clb_showMarketingOption', 'cookie-banner-options', 'cookie-banner-setting');
     add_settings_field('clb_styles', 'Styles', 'setting_clb_styles', 'cookie-banner-options', 'cookie-banner-setting');
     add_settings_field('clb_scripts', 'Scripts to block', 'setting_clb_scripts', 'cookie-banner-options', 'cookie-banner-setting');
+    add_settings_field('clb_preferences_scripts', 'Preferences scripts to block', 'setting_clb_preferences_scripts', 'cookie-banner-options', 'cookie-banner-setting');
+    add_settings_field('clb_marketing_scripts', 'Marketing scripts to block', 'setting_clb_marketing_scripts', 'cookie-banner-options', 'cookie-banner-setting');
+    add_settings_field('clb_statistics_scripts', 'Statistics scripts to block', 'setting_clb_statistics_scripts', 'cookie-banner-options', 'cookie-banner-setting');
     
     register_setting('cookie-banner-setting', 'clb_message');
     register_setting('cookie-banner-setting', 'clb_policyLink');
@@ -66,7 +69,10 @@ function cookie_banner_settings_page_setup()
 
     register_setting('cookie-banner-setting', 'clb_styles');
     register_setting('cookie-banner-setting', 'clb_scripts');
-
+    register_setting('cookie-banner-setting', 'clb_preferences_scripts');
+    register_setting('cookie-banner-setting', 'clb_marketing_scripts');
+    register_setting('cookie-banner-setting', 'clb_statistics_scripts');
+    
 }
 
 function setting_clb_message()
@@ -125,31 +131,31 @@ function setting_clb_declineButtonText()
 
 function setting_clb_showDeclineButton()
 { ?>
-    <input type="checkbox" name="clb_showDeclineButton" id="clb_showDeclineButton" value="true" <?php checked(1, get_option('clb_showDeclineButton'), true); ?>" />
+    <input type="checkbox" name="clb_showDeclineButton" id="clb_showDeclineButton" value="1" <?php checked(1, get_option('clb_showDeclineButton')); ?>" />
 <?php
 }
 
 function setting_clb_dismissOnScroll()
 { ?>
-    <input type="checkbox" name="clb_dismissOnScroll" id="clb_dismissOnScroll" value="true" <?php checked(1, get_option('clb_dismissOnScroll'), true); ?>" />
+    <input type="checkbox" name="clb_dismissOnScroll" id="clb_dismissOnScroll" value="1" <?php checked(1, get_option('clb_dismissOnScroll')); ?>" />
 <?php
 }
 
 function setting_clb_showPreferencesOption()
 { ?>
-    <input type="checkbox" name="clb_showPreferencesOption" id="clb_showPreferencesOption" value="false" <?php checked(1, get_option('clb_showPreferencesOption'), true); ?>" />
+    <input type="checkbox" name="clb_showPreferencesOption" id="clb_showPreferencesOption" value="1" <?php checked(1, get_option('clb_showPreferencesOption')); ?>" />
 <?php
 }
 
 function setting_clb_showStatisticsOption()
 { ?>
-    <input type="checkbox" name="clb_showStatisticsOption" id="clb_showStatisticsOption" value="false" <?php checked(1, get_option('clb_showStatisticsOption'), true); ?>" />
+    <input type="checkbox" name="clb_showStatisticsOption" id="clb_showStatisticsOption" value="1" <?php checked(1, get_option('clb_showStatisticsOption')); ?>" />
 <?php
 }
 
 function setting_clb_showMarketingOption()
 { ?>
-    <input type="checkbox" name="clb_showMarketingOption" id="clb_showMarketingOption" value="false" <?php checked(1, get_option('clb_showMarketingOption'), true); ?>" />
+    <input type="checkbox" name="clb_showMarketingOption" id="clb_showMarketingOption" value="1" <?php checked(1, get_option('clb_showMarketingOption')); ?>" />
 <?php
 }
 
@@ -162,5 +168,23 @@ function setting_clb_styles()
 function setting_clb_scripts()
 { ?>
     <textarea style="width:70%;" rows="10" name="clb_scripts" id="clb_scripts"><?php echo get_option('clb_scripts');?></textarea>
+<?php
+}
+
+function setting_clb_preferences_scripts()
+{ ?>
+    <textarea style="width:70%;" rows="10" name="clb_preferences_scripts" id="clb_preferences_scripts"><?php echo get_option('clb_preferences_scripts');?></textarea>
+<?php
+}
+
+function setting_clb_marketing_scripts()
+{ ?>
+    <textarea style="width:70%;" rows="10" name="clb_marketing_scripts" id="clb_marketing_scripts"><?php echo get_option('clb_marketing_scripts');?></textarea>
+<?php
+}
+
+function setting_clb_statistics_scripts()
+{ ?>
+    <textarea style="width:70%;" rows="10" name="clb_statistics_scripts" id="clb_statistics_scripts"><?php echo get_option('clb_statistics_scripts');?></textarea>
 <?php
 }

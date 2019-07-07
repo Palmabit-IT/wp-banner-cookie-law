@@ -71,6 +71,18 @@ function clb_blockScript()
     <script type="text/plain" class="_rcl">
         <?php echo get_clb_scripts(); ?>
     </script>
+
+    <script type="text/plain" class="_rcl_preferences">
+        <?php echo get_clb_preferences_scripts(); ?>
+    </script>
+
+    <script type="text/plain" class="_rcl_marketing">
+        <?php echo get_clb_marketing_scripts(); ?>
+    </script>
+
+    <script type="text/plain" class="_rcl_statistics">
+        <?php echo get_clb_statistics_scripts(); ?>
+    </script>
 <?php
 }
 

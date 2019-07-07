@@ -91,7 +91,7 @@ function get_clb_dismissOnScroll_option()
 function get_clb_showPreferencesOption_option()
 {
     if (empty(get_option('clb_showPreferencesOption'))) {
-        return 'true';
+        return 'false';
     }
     return get_option('clb_showPreferencesOption');
 }
@@ -99,7 +99,7 @@ function get_clb_showPreferencesOption_option()
 function get_clb_showStatisticsOption_option()
 {
     if (empty(get_option('clb_showStatisticsOption'))) {
-        return 'true';
+        return 'false';
     }
     return get_option('clb_showStatisticsOption');
 }
@@ -107,7 +107,7 @@ function get_clb_showStatisticsOption_option()
 function get_clb_showMarketingOption_option()
 {
     if (empty(get_option('clb_showMarketingOption'))) {
-        return 'true';
+        return 'false';
     }
     return get_option('clb_showMarketingOption');
 }
@@ -122,4 +122,16 @@ function get_clb_styles()
 
 function get_clb_scripts() {
     return get_option('clb_scripts');
+}
+
+function get_clb_preferences_scripts() {
+    return get_option('clb_preferences_scripts');
+}
+
+function get_clb_marketing_scripts() {
+    return get_option('clb_marketing_scripts');
+}
+
+function get_clb_statistics_scripts() {
+    return get_option('clb_statistics_scripts');
 }
