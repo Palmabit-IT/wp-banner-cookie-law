@@ -112,6 +112,22 @@ function get_clb_showMarketingOption_option()
     return get_option('clb_showMarketingOption');
 }
 
+function get_clb_managePreferencesButtonText_option()
+{
+    if (empty(get_option('clb_managePreferencesButtonText'))) {
+        return 'Customize';
+    }
+    return get_option('clb_managePreferencesButtonText');
+}
+
+function get_clb_savePreferencesButtonText_option()
+{
+    if (empty(get_option('clb_savePreferencesButtonText'))) {
+        return 'Save preferences';
+    }
+    return get_option('clb_savePreferencesButtonText');
+}
+
 function get_clb_styles()
 {
     if (empty(get_option('clb_styles'))) {
